@@ -15,7 +15,8 @@ on:
 env:
   main_var: "First var"
 jobs:
-
+  env:
+    main_var: "Seecond var"
   # This workflow contains a single job called "build"
   build:
    
