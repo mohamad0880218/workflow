@@ -36,5 +36,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo ${{ Vairables.Global }}
-          echo $(global)
+          echo ${{ Global }}
+          #echo $(Global)
