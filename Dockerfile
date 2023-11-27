@@ -5,6 +5,6 @@ RUN pip3 install matplotlib flask numpy app xmlrunner pytest flask_sqlalchemy
 RUN git clone https://github.com/mohamad0880218/workflow.git 
 #COPY .  ./
 #CMD ["echo","Image Created"]
-RUN pytest ./workflow/testt.py --junitxml=report.xml
-RUN mv report.xml ./workflow/Artifact/
-CMD ["python3","./workflow/main.py"]
+RUN pytest ./Final-Project/testt.py --junitxml=report.xml
+RUN mv report.xml ./Final-Project/Artifact/
+CMD ["python3","./Final-Project/main.py"]
