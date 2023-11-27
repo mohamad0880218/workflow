@@ -18,7 +18,7 @@ jobs:
      - name: Pulling images from package
        run: |
          docker build -t ghcr.io/mohamad0880218/python:latest .
-         d#ocker pull ghcr.io/mohamad0880218/python:latest
+         # docker pull ghcr.io/mohamad0880218/python:latest
          docker run -d -p 7000:5000 --name python ghcr.io/mohamad0880218/python:latest
          docker stop python
          docker rm python
