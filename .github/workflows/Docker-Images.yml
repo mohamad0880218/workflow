@@ -19,4 +19,4 @@ jobs:
          
     - name: Build Docker image
       run: |
-        docker build -t Python-app .
+        docker build -t python-app .
