@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest flask flask_sqlalchemy 
+        pip install flake8 pytest flask flask_sqlalchemy app xmlrunner
         
     - name: Lint with flake8
       run: |
@@ -36,4 +36,10 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest testt.py
+        pytest testt.py --junitxml=report.xml
+    
+    - name: artifacts
+      uses: actions/upload-artifact@v3
+      with: 
+        name: Custom_Artifact
+        path: report.xml
