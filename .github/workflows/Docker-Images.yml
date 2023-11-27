@@ -19,4 +19,5 @@ jobs:
          
     - name: Build Docker image
       run: |
-        docker build -t python-app .
+        docker build -t ghcr.io/mohamad0880218/python:latest .
+        docker push ghcr.io/mohamad0880218/python:latest
