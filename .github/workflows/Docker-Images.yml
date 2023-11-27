@@ -17,7 +17,8 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Login to GitHub Container Registry
-      run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.TOKEN }}
+      run: echo ${{ secrets.TOKEN }} | docker login --username your_username --password-stdin registry.example.com
+
 
 
          
