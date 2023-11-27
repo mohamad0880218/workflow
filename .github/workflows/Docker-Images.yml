@@ -16,7 +16,9 @@ jobs:
     steps:
      - uses: actions/checkout@v3     
      - name: Pulling images from package
-       run: docker run -d -p 7000:5000 ghcr.io/mohamad0880218/python:latest
+       run: |
+         docker pull ghcr.io/mohamad0880218/python:latest
+         docker run -d -p 7000:5000 ghcr.io/mohamad0880218/python:latest
      # run: |
       #  echo pass=${{ secrets.TOKEN }}
      #   docker login ghcr.io --username mohamad0880218 --password pass
